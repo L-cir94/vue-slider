@@ -44,16 +44,16 @@ createApp({
     },
     methods: {
         incrementActive() {
-            if (activeImage === images.length - 1) {
-                activeImage = 0
-              } else {
-                activeImage++
+            this.activeImage++
+            if (this.activeImage === this.movie.images.length - 1) {
+                this.activeImage = 0
               }
         },
         decrementActive(){
-            if (activeImage === 0) {
-                activeImage = images.length - 1
-              } else { activeImage-- }
+            this.activeImage-- 
+            if (this.activeImage === 0) {
+                this.activeImage = this.movie.images.length - 1
+              } 
         }
       }
 }).mount('#app')
