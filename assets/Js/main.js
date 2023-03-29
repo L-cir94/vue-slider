@@ -13,18 +13,47 @@ createApp({
         return {
             activeImage: 0,
             movie:{
-                title:'',
+/*                 title:'',
                 category:'',
-                duration: 60,
+                duration: 60, */
                 images: [
-                    "https://www.themoviedb.org/t/p/w500/b3zVRZ9R2QyV0klRESMLKaBwQqm.jpg",
-                    "https://www.themoviedb.org/t/p/w220_and_h330_face/BbNvKCuEF4SRzFXR16aK6ISFtR.jpg",
-                    "https://www.themoviedb.org/t/p/w220_and_h330_face/AhifyrSNkRVFMJ94CEMfBv1FaMz.jpg",
-                    "https://www.themoviedb.org/t/p/w220_and_h330_face/msx02cHuCa33PUQV6Ez5KhaJa4Q.jpg",
-                    "https://www.themoviedb.org/t/p/w220_and_h330_face/9VdgIj9R9Z9dfDoO76v57V6FF6y.jpg"
-          
-                  ]
+                    {
+                        image: './assets/img/01.webp',
+                        title: 'Marvel\'s Spiderman Miles Morale',
+                        text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
+                    }, {
+                        image: './assets/img/02.webp',
+                        title: 'Ratchet & Clank: Rift Apart',
+                        text: 'Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality.',
+                    }, {
+                        image: './assets/img/03.webp',
+                        title: 'Fortnite',
+                        text: "Grab all of your friends and drop into Epic Games Fortnite, a massive 100 - player face - off that combines looting, crafting, shootouts and chaos.",
+                    }, {
+                        image: './assets/img/04.webp',
+                        title: 'Stray',
+                        text: 'Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city',
+                    }, {
+                        image: './assets/img/05.webp',
+                        title: "Marvel's Avengers",
+                        text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
+                    }
+                ],
             }
         }
-    }
+    },
+    methods: {
+        incrementActive() {
+            if (activeImage === images.length - 1) {
+                activeImage = 0
+              } else {
+                activeImage++
+              }
+        },
+        decrementActive(){
+            if (activeImage === 0) {
+                activeImage = images.length - 1
+              } else { activeImage-- }
+        }
+      }
 }).mount('#app')
