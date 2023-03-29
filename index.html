@@ -19,22 +19,22 @@
 <body>
 
 
-	<div id="app" class="container">
+    <div id="app" class="container">
         <button class="revert">
-            <i class="fa-solid fa-arrow-rotate-left">  Revert autoplay</i>
+            <i class="fa-solid fa-arrow-rotate-left"> Revert autoplay</i>
         </button>
-		<div class="slider">
-			<div class="controls">
-				<button class="prev"@click="decrementActive">
-					<i class="fa fa-arrow-up"> Prev</i>
-				</button>
-				<button class="next"@click="incrementActive">
-					<i class="fas fa-arrow-down"> Next</i>
-				</button>
-			</div>
-			<div class="slides">
+        <div class="slider">
+            <div class="controls">
+                <button class="prev" @click="decrementActive">
+                    <i class="fa fa-arrow-up"> Prev</i>
+                </button>
+                <button class="next" @click="incrementActive">
+                    <i class="fas fa-arrow-down"> Next</i>
+                </button>
+            </div>
+            <div class="slides">
                 <img :src="movie.images[activeImage].image" alt="">
-                <h2 >{{movie.titles[activeImage]}}</h2>
+                <h2>{{movie.titles[activeImage]}}</h2>
                 <p>{{movie.descriptions[activeImage]}}</p>
                 <!-- <div class="slide active">
 					<img src="./assets/img/01.webp" alt="">
@@ -51,19 +51,17 @@
 				<div class="slide">
 					<img src="./assets/img/05.webp" alt="">
 				</div> -->
-			</div>
-
-
-			<div class="thumbs">
-         <!--        <img :src="movie.image[activeImage]" alt=""> -->
-				<!-- <img src="./assets/img/01.webp" alt="" class="active">
+            </div>
+            <div class="thumbs">
+                <img :src="movie.images[activeImage].image">
+                <!-- <img src="./assets/img/01.webp" alt="" class="active">
 				<img src="./assets/img/02.webp" alt="">
 				<img src="./assets/img/03.webp" alt="">
 				<img src="./assets/img/04.webp" alt="">
 				<img src="./assets/img/05.webp" alt=""> -->
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 
 
 
