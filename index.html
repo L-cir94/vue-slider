@@ -53,7 +53,7 @@
 				</div> -->
             </div>
             <div class="thumbs">
-				<img :class="index == activeImage ? 'active': '' " :src="image.image" alt="" v-for=" (image, index) in movie.images">
+				<img @click="thumbNailsClick(index)" :class="index == activeImage ? 'active': '' " :src="image.image" alt="" v-for=" (image, index) in movie.images">
             </div>
         </div>
     </div>

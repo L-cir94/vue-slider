@@ -56,6 +56,9 @@ createApp({
                 this.activeImage--
             }
         },
+        thumbNailsClick(index){
+            this.activeImage = index
+        },
 
       }
 
