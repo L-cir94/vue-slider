@@ -34,8 +34,8 @@
             </div>
             <div class="slides">
                 <img :src="movie.images[activeImage].image" alt="">
-                <h2>{{movie.titles[activeImage]}}</h2>
-                <p>{{movie.descriptions[activeImage]}}</p>
+                <h2>{{movie.images[activeImage].title}}</h2>
+                <p>{{movie.images[activeImage].text}}</p>
                 <!-- <div class="slide active">
 					<img src="./assets/img/01.webp" alt="">
 				</div>
@@ -53,12 +53,7 @@
 				</div> -->
             </div>
             <div class="thumbs">
-                <img :src="movie.images[activeImage].image">
-                <!-- <img src="./assets/img/01.webp" alt="" class="active">
-				<img src="./assets/img/02.webp" alt="">
-				<img src="./assets/img/03.webp" alt="">
-				<img src="./assets/img/04.webp" alt="">
-				<img src="./assets/img/05.webp" alt=""> -->
+				<img :src="image.image" alt="" v-for=" image in movie.images">
             </div>
         </div>
     </div>
