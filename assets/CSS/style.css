@@ -31,7 +31,7 @@ button.revert
 	padding: 0.25rem 0.5rem;
 	margin: 1rem 0;
 	border: none;
-	background-color: rgb(80, 113, 244);
+	background-color: rgb(255, 255, 255);
 	color: white;
 	border-radius: 1rem;
     padding: 10px;
@@ -44,7 +44,8 @@ button.revert:hover
 	padding: 0.25rem 0.5rem;
 	margin: 1rem 0;
 	border: none;
-	background-color: rgb(255, 255, 255);
+
+	background-color: rgb(80, 113, 244);
 	color: rgb(0, 0, 0);
 	border-radius: 1rem;
     padding: 10px;
@@ -61,8 +62,8 @@ button.next
 	width: auto;
 	aspect-ratio: 1;
 	border-radius: 50%;
-
-	margin-right: 135px;
+padding: 10px;
+	margin-right: 150px;
 
 }
 button.prev:hover,

@@ -59,7 +59,6 @@ createApp({
         thumbNailsClick(index){
             this.activeImage = index
         },
-
       }
 
 }).mount('#app')

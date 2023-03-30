@@ -20,44 +20,34 @@
 
 
     <div id="app" class="container">
+
         <button class="revert">
             <i class="fa-solid fa-arrow-rotate-left"> Revert autoplay</i>
         </button>
+
         <div class="slider">
+
             <div class="controls">
                 <button class="prev" @click="decrementActive">
-                    <i class="fa fa-arrow-up"> Prev</i>
+                    <i class="fa fa-arrow-up"></i>
                 </button>
                 <button class="next" @click="incrementActive">
-                    <i class="fas fa-arrow-down"> Next</i>
+                    <i class="fas fa-arrow-down"></i>
                 </button>
             </div>
+
             <div class="slides">
                 <img :src="movie.images[activeImage].image" alt="">
                 <h2>{{movie.images[activeImage].title}}</h2>
                 <p>{{movie.images[activeImage].text}}</p>
-                <!-- <div class="slide active">
-					<img src="./assets/img/01.webp" alt="">
-				</div>
-				<div class="slide">
-					<img src="./assets/img/02.webp" alt="">
-				</div>
-				<div class="slide">
-					<img src="./assets/img/03.webp" alt="">
-				</div>
-				<div class="slide">
-					<img src="./assets/img/04.webp" alt="">
-				</div>
-				<div class="slide">
-					<img src="./assets/img/05.webp" alt="">
-				</div> -->
             </div>
+
             <div class="thumbs">
 				<img @click="thumbNailsClick(index)" :class="index == activeImage ? 'active': '' " :src="image.image" alt="" v-for=" (image, index) in movie.images">
             </div>
+			
         </div>
     </div>
-
 
 
 </body>
